@@ -47,7 +47,7 @@ const FirstSection = ({ data }) => {
             >
               <ContentWrapper key={index}>
                 {" "}
-                <Img src={item.snippet.thumbnails.default.url} />
+                <Img src={item.snippet.thumbnails.high.url} />
                 <Description>
                   <History>{item.snippet.title}</History>
                   <Stats>
