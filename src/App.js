@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import Home from "components/pages/Home";
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import "App.css";
+import Channel from "components/pages/Channel";
+import VideoPlayer from "components/pages/VideoPlayer";
+import ScrollRestore from "components/ScrollRestore";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <ScrollRestore />
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/channel/:slug" exact component={Channel} />
+        <Route path="/VideoPlayer" exact component={VideoPlayer} />
+
+        <Route component={VideoPlayer} />
+      </Switch>
+    </Router>
   );
-}
+};
 
 export default App;
