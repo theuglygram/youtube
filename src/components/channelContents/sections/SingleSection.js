@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import ballons from "assets/images/ballons.png";
-import aste from "assets/images/aste.png";
+import asteroids from "assets/images/asteroids.png";
 import lamp from "assets/images/lamp.png";
 import tech from "assets/images/tech.png";
 
@@ -16,7 +16,7 @@ const SingleSection = () => {
       time: "4:15 pm",
     },
     {
-      img: aste,
+      img: asteroids,
       historyTitle: "Advertising Outdoors",
       view: "123k views",
       day: "1 months ago",
@@ -77,9 +77,11 @@ const Wrapper = styled.div`
 `;
 const ContentWrapper = styled.div`
   margin: 30px 0;
+  max-width: 650px;
+  width: 100%;
 `;
 const Img = styled.img`
-  max-width: 250px;
+  max-width: 650px;
   width: 100%;
 `;
 const Description = styled.div`
@@ -117,7 +119,7 @@ const Name = styled.p`
 `;
 const Time = styled.div`
   position: absolute;
-  left: 177px;
+  right: 10px;
   top: -50px;
   background: #c2c2c2;
   mix-blend-mode: normal;
@@ -125,8 +127,5 @@ const Time = styled.div`
   border-radius: 12px;
   padding: 5px 10px;
   font-size: 12px;
-  @media only screen and (max-width: 320px) {
-    left: 130px;
-  }
 `;
 export default SingleSection;

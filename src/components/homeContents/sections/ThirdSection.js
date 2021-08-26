@@ -119,7 +119,7 @@ const Name = styled.p`
 `;
 const Time = styled.div`
   position: absolute;
-  left: 177px;
+  right: 10px;
   top: -50px;
   background: #c2c2c2;
   mix-blend-mode: normal;
@@ -127,8 +127,5 @@ const Time = styled.div`
   border-radius: 12px;
   padding: 5px 10px;
   font-size: 12px;
-  @media only screen and (max-width: 320px) {
-    left: 130px;
-  }
 `;
 export default ThirdSection;

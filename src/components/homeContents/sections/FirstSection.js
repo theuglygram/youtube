@@ -41,26 +41,27 @@ const FirstSection = ({ data }) => {
       {data && data.length > 0 && (
         <Wrapper>
           {data.map((item, index) => (
-            <Link to={`/channel/${item.snippet.channelId}`}>
+            <Link
+              style={{ width: "100%", maxWidth: "650px" }}
+              to={`/channel/${item.snippet.channelId}`}
+            >
               <ContentWrapper key={index}>
-                <Sm>
-                  {" "}
-                  <Img src={item.snippet.thumbnails.default.url} />
-                  <Description>
-                    <History>{item.snippet.title}</History>
-                    <Stats>
-                      <Day>
-                        {" "}
-                        {new Date(
-                          `${item.snippet.publishedAt}`
-                        ).toLocaleDateString()}
-                      </Day>
-                      <Name>{item.snippet.channelTitle} </Name>
+                {" "}
+                <Img src={item.snippet.thumbnails.default.url} />
+                <Description>
+                  <History>{item.snippet.title}</History>
+                  <Stats>
+                    <Day>
+                      {" "}
+                      {new Date(
+                        `${item.snippet.publishedAt}`
+                      ).toLocaleDateString()}
+                    </Day>
+                    <Name>{item.snippet.channelTitle} </Name>
 
-                      {/* <Time>{item.contentDetails.contentRating.definition}</Time> */}
-                    </Stats>
-                  </Description>
-                </Sm>
+                    {/* <Time>{item.contentDetails.contentRating.definition}</Time> */}
+                  </Stats>
+                </Description>
                 <Views>{Number(`${item.statistics.viewCount}`)} Views</Views>
               </ContentWrapper>
             </Link>
@@ -92,12 +93,7 @@ const ContentWrapper = styled.div`
   max-width: 650px;
   width: 100%;
 `;
-const Sm = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-`;
+
 const Img = styled.img`
   max-width: 650px;
   width: 100%;
@@ -135,19 +131,5 @@ const Name = styled.p`
   font-weight: 400;
   line-height: 16px;
   color: #c2c2c2;
-`;
-const Time = styled.div`
-  position: absolute;
-  left: 177px;
-  top: -50px;
-  background: #c2c2c2;
-  mix-blend-mode: normal;
-  color: #fff;
-  border-radius: 12px;
-  padding: 5px 10px;
-  font-size: 12px;
-  @media only screen and (max-width: 320px) {
-    left: 130px;
-  }
 `;
 export default FirstSection;

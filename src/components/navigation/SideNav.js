@@ -1,26 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 import TopItems from "./navitems/TopItems";
 import LibraryItems from "./navitems/LibraryItems";
 import Subscriptions from "./navitems/Subscriptions";
-import axios from "axios";
 
 const SideNav = () => {
-  const [sub, setSub] = useState(null);
-  const subScriptions = () => {
-    axios
-      .get(
-        `'https://youtube.googleapis.com/youtube/v3/subscriptions?part=snippet%2CcontentDetails&mine=true&key=AIzaSyA9JH6lmbwJYeNkWJMxzl4m3IoLEUgVOTo'
- `
-      )
-      .then((res) => {
-        setSub(res.sub);
-        console.log(res.sub);
-      });
-  };
-  useEffect(() => {
-    subScriptions();
-  }, []);
   return (
     <Wrapper>
       <NavWrapper>
@@ -71,9 +55,6 @@ const NavWrapper = styled.div`
 `;
 const HomeSection = styled.div`
   margin: 0 0 60px;
-`;
-const Icon = styled.img`
-  margin-right: 15px;
 `;
 const LibrarySection = styled.div``;
 const SubscriptionSection = styled.div``;

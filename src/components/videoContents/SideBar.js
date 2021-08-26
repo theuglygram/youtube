@@ -78,9 +78,11 @@ const Wrapper = styled.div`
 `;
 const ContentWrapper = styled.div`
   margin: 30px 0;
+  max-width: 650px;
+  width: 100%;
 `;
 const Img = styled.img`
-  max-width: 250px;
+  max-width: 650px;
   width: 100%;
 `;
 const Description = styled.div`
@@ -118,7 +120,7 @@ const Name = styled.p`
 `;
 const Time = styled.div`
   position: absolute;
-  left: 150px;
+  right: 10px;
   top: -50px;
   background: #c2c2c2;
   mix-blend-mode: normal;
@@ -126,9 +128,6 @@ const Time = styled.div`
   border-radius: 12px;
   padding: 5px 10px;
   font-size: 12px;
-  @media only screen and (max-width: 320px) {
-    left: 160px;
-  }
 `;
 const SideWrapper = styled.div`
   padding: 0 20px;

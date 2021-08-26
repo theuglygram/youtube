@@ -69,9 +69,11 @@ const Wrapper = styled.div`
 `;
 const ContentWrapper = styled.div`
   margin: 30px 0;
+  max-width: 650px;
+  width: 100%;
 `;
 const Img = styled.img`
-  max-width: 330px;
+  max-width: 650px;
   width: 100%;
 `;
 const Description = styled.div`
