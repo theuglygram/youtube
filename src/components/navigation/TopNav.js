@@ -57,7 +57,7 @@ const TopNav = () => {
 };
 const Wrapper = styled.div``;
 const NavWrapper = styled.nav`
-  max-width: 1300px;
+  max-width: 1150px;
   width: 100%;
   margin: 20px auto;
   display: flex;
