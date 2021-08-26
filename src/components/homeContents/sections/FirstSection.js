@@ -75,7 +75,7 @@ const Wrapper = styled.div`
   width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  padding: 0 20px;
+  padding: 0 16px;
   gap: 30px;
   @media only screen and (max-width: 950px) {
     grid-template-columns: repeat(2, 1fr);
@@ -89,6 +89,8 @@ const Wrapper = styled.div`
 
 const ContentWrapper = styled.div`
   margin: 30px 0;
+  max-width: 650px;
+  width: 100%;
 `;
 const Sm = styled.div`
   display: flex;
@@ -97,7 +99,7 @@ const Sm = styled.div`
   flex-direction: column;
 `;
 const Img = styled.img`
-  max-width: 250px;
+  max-width: 650px;
   width: 100%;
 `;
 const Description = styled.div`

@@ -41,7 +41,7 @@ const SecondSection = () => {
             <Stats>
               <Views>{item.view}</Views>
               <Day> {item.day}</Day>
-              <Name>{item.name} Blair</Name>
+              <Name>{item.name}</Name>
               <Time>{item.time}</Time>
             </Stats>
           </Description>
